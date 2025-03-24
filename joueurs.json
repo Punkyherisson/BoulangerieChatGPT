@@ -1,0 +1,26 @@
+[
+    {
+        "joueur": "Lolo",
+        "boutique": "Le pain au Levain",
+        "lieu": "Ville",
+        "mode": "Cr\u00e9ation",
+        "forme_juridique": "EI",
+        "budget": {
+            "apport": 20000,
+            "emprunt": 0,
+            "total": 20000
+        }
+    },
+    {
+        "joueur": "Manu",
+        "boutique": "Le pain tendre",
+        "lieu": "Village \u00e0 la campagne",
+        "mode": "Cr\u00e9ation",
+        "forme_juridique": "EI",
+        "budget": {
+            "apport": 20000,
+            "emprunt": 0,
+            "total": 20000
+        }
+    }
+]
