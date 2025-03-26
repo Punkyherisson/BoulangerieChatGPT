@@ -1,50 +1,60 @@
-[
-    {
-        "joueur": "Lolo",
-        "boutique": "Le pain au Levain",
-        "lieu": "Paris",
-        "mode": "Cr\u00e9ation",
-        "forme_juridique": "Entreprise Individuelle (EI)",
-        "budget": {
-            "apport": 20000,
-            "emprunt": 0,
-            "total": 70000
+{
+    "Lolo": {
+        "Le pain au Levain": {
+            "lieu": "Paris",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "Entreprise Individuelle (EI)",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 70000
+            }
         }
     },
-    {
-        "joueur": "Manu",
-        "boutique": "Le pain tendre",
-        "lieu": "Village \u00e0 la campagne",
-        "mode": "Cr\u00e9ation",
-        "forme_juridique": "EI",
-        "budget": {
-            "apport": 20000,
-            "emprunt": 0,
-            "total": 20000
+    "Manu": {
+        "Le pain tendre": {
+            "lieu": "Village \u00e0 la campagne",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "EI",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            }
+        },
+        "Le Herisson": {
+            "lieu": "Paris",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "Entreprise Individuelle (EI)",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 70000
+            }
         }
     },
-    {
-        "joueur": "Manu",
-        "boutique": "Le Herisson",
-        "lieu": "Paris",
-        "mode": "Cr\u00e9ation",
-        "forme_juridique": "Entreprise Individuelle (EI)",
-        "budget": {
-            "apport": 20000,
-            "emprunt": 0,
-            "total": 70000
+    "Papa": {
+        "Papa Pain": {
+            "lieu": "Paris",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "Entreprise Individuelle (EI)",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 70000
+            }
         }
     },
-    {
-        "joueur": "Papa",
-        "boutique": "Papa Pain",
-        "lieu": "Paris",
-        "mode": "Cr\u00e9ation",
-        "forme_juridique": "Entreprise Individuelle (EI)",
-        "budget": {
-            "apport": 20000,
-            "emprunt": 0,
-            "total": 70000
+    "Maggie": {
+        "PainPerdu": {
+            "lieu": "Paris",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "SARL",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            }
         }
     }
-]
+}
