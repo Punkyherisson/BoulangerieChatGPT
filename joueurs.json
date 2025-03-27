@@ -56,5 +56,29 @@
                 "total": 20000
             }
         }
+    },
+    "Pipi": {
+        "Caca": {
+            "lieu": "Ville",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "SARL",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            }
+        }
+    },
+    "Zazie": {
+        "Dans Metro": {
+            "lieu": "Ville",
+            "mode": "Reprise",
+            "forme_juridique": "EI",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 100000,
+                "total": 120000
+            }
+        }
     }
 }
