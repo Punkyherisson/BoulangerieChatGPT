@@ -1,5 +1,6 @@
 import boulangerie
 import sauvegarde
+import parametres_lieu
 
 def afficher_recapitulatif(boutique, info_boulangerie):
     """Affiche un récapitulatif des choix effectués pour la boulangerie."""
@@ -31,6 +32,12 @@ def main():
             
             # ✅ Utilisation de la fonction d'affichage
             afficher_recapitulatif(boutique, info_boulangerie)
+            lieu = info_boulangerie['lieu']
+            params = parametres_lieu.obtenir_parametres_lieu(lieu)
+            print(f"\n📍 {lieu} - Concurrence : {params['concurrence']['niveau']}")
+            print(f"Loyer mensuel : {params['loyer_mensuel'][0]}€ à {params['loyer_mensuel'][1]}€")
+            print(f"Taxes : CFE = {params['taxes'].get('CFE', 'N/A') * 100}%, CET = {params['taxes'].get('CET', 'N/A') * 100}%")
+
             return
 
     # Création d'une nouvelle boulangerie
@@ -39,6 +46,11 @@ def main():
 
     # ✅ Utilisation de la fonction d'affichage
     afficher_recapitulatif(boutique, info_boulangerie)
+    lieu = info_boulangerie['lieu']
+    params = parametres_lieu.obtenir_parametres_lieu(lieu)
+    print(f"\n📍 {lieu} - Concurrence : {params['concurrence']['niveau']}")
+    print(f"Loyer mensuel : {params['loyer_mensuel'][0]}€ à {params['loyer_mensuel'][1]}€")
+    print(f"Taxes : CFE = {params['taxes'].get('CFE', 'N/A') * 100}%, CET = {params['taxes'].get('CET', 'N/A') * 100}%")
 
 if __name__ == "__main__":
     main()
