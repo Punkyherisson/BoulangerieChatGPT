@@ -1,0 +1,8 @@
+# Ignorer le dossier de cache Python
+__pycache__/
+
+# Ignorer les fichiers JSON de sauvegarde s'ils ne doivent pas être partagés
+#*.json
+
+# Ignorer les fichiers de logs (si jamais tu en crées)
+*.log

@@ -6,12 +6,32 @@ PARAMETRES_LIEU = {
     "Paris": {
         "loyer_mensuel": (5000, 12000),
         "taxes": {
-            "CFE": 0.03,
-            "CET": 0.03
+            "CFE": 0.03,  # 3%
+            "CET": 0.03   # 3%
         },
         "concurrence": {
             "niveau": "Forte",
-            "perte_clients": 0.30
+            "perte_clients": 0.3  # 30% des clients potentiels perdus
+        },
+        "attentes_clients": {
+            "qualite": 9,  # Exigence sur la qualité (1 à 10)
+            "prix_max": 7  # Sensibilité au prix (1 = bas prix, 10 = prix élevés acceptés)
+        },
+        "fournisseurs": {
+            "choix": 10,  # Facilité d'accès aux fournisseurs (1 à 10)
+            "cout": 8  # Coût des matières premières (1 = faible, 10 = très élevé)
+        },
+        "emplois": {
+            "disponibilite": 9,  # Facilité de recrutement (1 à 10)
+            "salaires": 10  # Niveau des salaires (1 = bas, 10 = très élevé)
+        },
+        "transport": {
+            "accessibilite": 10,  # Facilité pour attirer les clients (1 à 10)
+            "livraison": 4  # Besoin en véhicules de livraison (1 = faible, 10 = très élevé)
+        },
+        "reglementation": {
+            "flexibilite": 4,  # Facilité des horaires et réglementations (1 = très contraignant, 10 = très souple)
+            "contraintes": 8  # Niveau des restrictions légales (1 = faible, 10 = très strict)
         }
     },
     "Ville": {
@@ -23,6 +43,26 @@ PARAMETRES_LIEU = {
         "concurrence": {
             "niveau": "Moyenne",
             "perte_clients": 0.15
+        },
+        "attentes_clients": {
+            "qualite": 7,
+            "prix_max": 6
+        },
+        "fournisseurs": {
+            "choix": 7,
+            "cout": 6
+        },
+        "emplois": {
+            "disponibilite": 6,
+            "salaires": 7
+        },
+        "transport": {
+            "accessibilite": 7,
+            "livraison": 5
+        },
+        "reglementation": {
+            "flexibilite": 6,
+            "contraintes": 6
         }
     },
     "Village à la campagne": {
@@ -34,6 +74,26 @@ PARAMETRES_LIEU = {
         "concurrence": {
             "niveau": "Faible",
             "perte_clients": 0.05
+        },
+        "attentes_clients": {
+            "qualite": 5,
+            "prix_max": 9
+        },
+        "fournisseurs": {
+            "choix": 4,
+            "cout": 4
+        },
+        "emplois": {
+            "disponibilite": 3,
+            "salaires": 4
+        },
+        "transport": {
+            "accessibilite": 3,
+            "livraison": 8
+        },
+        "reglementation": {
+            "flexibilite": 9,
+            "contraintes": 2
         }
     }
 }

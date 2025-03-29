@@ -48,9 +48,10 @@ def main():
     afficher_recapitulatif(boutique, info_boulangerie)
     lieu = info_boulangerie['lieu']
     params = parametres_lieu.obtenir_parametres_lieu(lieu)
-    print(f"\n📍 {lieu} - Concurrence : {params['concurrence']['niveau']}")
-    print(f"Loyer mensuel : {params['loyer_mensuel'][0]}€ à {params['loyer_mensuel'][1]}€")
-    print(f"Taxes : CFE = {params['taxes'].get('CFE', 'N/A') * 100}%, CET = {params['taxes'].get('CET', 'N/A') * 100}%")
-
+    print(f"💰 Loyer mensuel : {params['loyer_mensuel'][0]}€ - {params['loyer_mensuel'][1]}€")
+    print(f"📊 Concurrence : {params['concurrence']['niveau']} (perte clients : {params['concurrence']['perte_clients']*100}%)")
+    print(f"🛍️ Attentes clients - Qualité : {params['attentes_clients']['qualite']}/10, Prix max accepté : {params['attentes_clients']['prix_max']}/10")
+    print(f"🚚 Livraison : {params['transport']['livraison']}/10, Accessibilité : {params['transport']['accessibilite']}/10")
+    print(f"📜 Réglementation - Flexibilité : {params['reglementation']['flexibilite']}/10, Contraintes : {params['reglementation']['contraintes']}/10")
 if __name__ == "__main__":
     main()
