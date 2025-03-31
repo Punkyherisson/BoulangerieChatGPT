@@ -30,9 +30,30 @@ def rechercher_joueur(joueur):
     return list(data.get(joueur, {}).keys())
 
 def charger_sauvegarde(joueur, boutique):
-    """Charge les informations d'une sauvegarde spécifique."""
+    """Charge les informations d'une sauvegarde spécifique et ajoute les valeurs manquantes si nécessaire."""
     data = charger_donnees()
-    return data.get(joueur, {}).get(boutique, {})
+    info = data.get(joueur, {}).get(boutique, {})
+
+    # Valeurs par défaut pour éviter les KeyError
+    cles_defaut = {
+        "taille_boutique": "moyenne",
+        "taille_labo": "moyen",
+        "taille_stock": "moyen",
+        "taille_vente": "moyen"
+    }
+
+    modifie = False  # Vérifier si des changements sont faits
+
+    for cle, valeur in cles_defaut.items():
+        if cle not in info:
+            info[cle] = valeur
+            modifie = True
+
+    # Mettre à jour et sauvegarder seulement si des modifications ont été apportées
+    if modifie:
+        enregistrer_sauvegarde(joueur, boutique, info)
+
+    return info
 
 def enregistrer_sauvegarde(joueur, boutique, info):
     """Enregistre ou met à jour la sauvegarde d'un joueur pour une boutique donnée."""

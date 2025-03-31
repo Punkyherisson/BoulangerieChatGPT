@@ -1,112 +1,6 @@
 {
-    "Lolo": {
-        "Le pain au Levain": {
-            "lieu": "Paris",
-            "mode": "Cr\u00e9ation",
-            "forme_juridique": "Entreprise Individuelle (EI)",
-            "budget": {
-                "apport": 20000,
-                "emprunt": 0,
-                "total": 70000
-            }
-        }
-    },
     "Manu": {
-        "Le pain tendre": {
-            "lieu": "Village \u00e0 la campagne",
-            "mode": "Cr\u00e9ation",
-            "forme_juridique": "EI",
-            "budget": {
-                "apport": 20000,
-                "emprunt": 0,
-                "total": 20000
-            }
-        },
-        "Le Herisson": {
-            "lieu": "Paris",
-            "mode": "Cr\u00e9ation",
-            "forme_juridique": "Entreprise Individuelle (EI)",
-            "budget": {
-                "apport": 20000,
-                "emprunt": 0,
-                "total": 70000
-            }
-        }
-    },
-    "Papa": {
-        "Papa Pain": {
-            "lieu": "Paris",
-            "mode": "Cr\u00e9ation",
-            "forme_juridique": "Entreprise Individuelle (EI)",
-            "budget": {
-                "apport": 20000,
-                "emprunt": 0,
-                "total": 70000
-            }
-        }
-    },
-    "Maggie": {
-        "PainPerdu": {
-            "lieu": "Paris",
-            "mode": "Cr\u00e9ation",
-            "forme_juridique": "SARL",
-            "budget": {
-                "apport": 20000,
-                "emprunt": 0,
-                "total": 20000
-            }
-        }
-    },
-    "Pipi": {
-        "Caca": {
-            "lieu": "Ville",
-            "mode": "Cr\u00e9ation",
-            "forme_juridique": "SARL",
-            "budget": {
-                "apport": 20000,
-                "emprunt": 0,
-                "total": 20000
-            }
-        }
-    },
-    "Zazie": {
-        "Dans Metro": {
-            "lieu": "Ville",
-            "mode": "Reprise",
-            "forme_juridique": "EI",
-            "budget": {
-                "apport": 20000,
-                "emprunt": 100000,
-                "total": 120000
-            }
-        }
-    },
-    "Serpentar": {
-        "Pain Harry": {
-            "lieu": "Ville",
-            "mode": "Cr\u00e9ation",
-            "forme_juridique": "EI",
-            "budget": {
-                "apport": 20000,
-                "emprunt": 0,
-                "total": 20000
-            }
-        }
-    },
-    "Test": {
-        "Test": {
-            "lieu": "Paris",
-            "mode": "Cr\u00e9ation",
-            "forme_juridique": "SARL",
-            "budget": {
-                "apport": 20000,
-                "emprunt": 0,
-                "total": 20000
-            }
-        }
-    },
-    "Jordie": {
-        "Le Pain noir": {
+        "Pain Beni": {
             "lieu": "Paris",
             "mode": "Cr\u00e9ation",
             "forme_juridique": "SAS",
@@ -114,19 +8,49 @@
                 "apport": 20000,
                 "emprunt": 0,
                 "total": 20000
+            },
+            "taille_boutique": "moyenne",
+            "taille_labo": "moyen",
+            "taille_stock": "moyen",
+            "taille_vente": "moyen"
+        }
+    },
+    "Ines": {
+        "Dada": {
+            "lieu": "Paris",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "EI",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
             }
         }
     },
-    "Elie": {
-        "Pain ": {
+    "": {
+        "": {
             "lieu": "Ville",
-            "mode": "Reprise",
-            "forme_juridique": "SASU",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "EI",
             "budget": {
                 "apport": 20000,
-                "emprunt": 100000,
-                "total": 120000
+                "emprunt": 0,
+                "total": 20000
             }
+        }
+    },
+    "zozo": {
+        "io": {
+            "lieu": "Paris",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "Entreprise Individuelle (EI)",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            },
+            "taille_boutique": "petite",
+            "taille_labo": "petite"
         }
     }
 }
