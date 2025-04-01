@@ -35,6 +35,7 @@ def creation_boulangerie(joueur):
         budget["emprunt"] = max(0, rachat_fond - budget["total"])
         budget["total"] += budget["emprunt"]
 
+    
     # Demander la taille de la boutique et du labo
     taille_boutique = input("Entrez la taille de la boutique (petite, moyenne, grande) : ")
     taille_labo = input("Entrez la taille du laboratoire (petite, moyenne, grande) : ")

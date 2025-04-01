@@ -1,6 +1,7 @@
 # parametres_lieu.py
 
 import random
+import saisonnalite  # Module qui gère l'effet de la saisonnalité
 
 PARAMETRES_LIEU = {
     "Paris": {
@@ -103,9 +104,9 @@ def obtenir_parametres_lieu(lieu):
     return PARAMETRES_LIEU.get(lieu, {})
 
 def calculer_clients_journaliers(lieu):
-    """Calcule le nombre de clients en fonction du lieu et de la concurrence."""
+    """Calcule le nombre de clients en fonction du lieu, de la concurrence et de la saisonnalité."""
     params = obtenir_parametres_lieu(lieu)
-    
+
     base_clients = {
         "Paris": random.randint(150, 300),
         "Ville": random.randint(80, 150),
@@ -115,14 +116,19 @@ def calculer_clients_journaliers(lieu):
     clients_potentiels = base_clients.get(lieu, 0)
 
     # Application de la concurrence
-    perte = params.get("concurrence", {}).get("perte_clients", 0)
-    clients_reels = int(clients_potentiels * (1 - perte))
+    perte_concurrence = params.get("concurrence", {}).get("perte_clients", 0)
+    clients_apres_concurrence = int(clients_potentiels * (1 - perte_concurrence))
+
+    # Application de la saisonnalité (effet basé sur le mois actuel)
+    multiplicateur_saison = saisonnalite.effet_saisonnalite()
+    clients_finaux = int(clients_apres_concurrence * multiplicateur_saison)
 
     print(f"📍 {lieu} : {clients_potentiels} clients potentiels, "
-          f"mais concurrence {params.get('concurrence', {}).get('niveau', 'Inconnue')} "
-          f"➝ {clients_reels} clients réels.")
-    
-    return clients_reels
+          f"concurrence {params.get('concurrence', {}).get('niveau', 'Inconnue')} "
+          f"➝ {clients_apres_concurrence} après concurrence "
+          f"➝ {clients_finaux} après ajustement saisonnier.")
+
+    return clients_finaux
 
 # Test rapide du module
 if __name__ == "__main__":

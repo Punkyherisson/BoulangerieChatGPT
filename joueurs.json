@@ -52,5 +52,21 @@
             "taille_boutique": "petite",
             "taille_labo": "petite"
         }
+    },
+    "Miko": {
+        "Poil": {
+            "lieu": "Ville",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "SARL",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            },
+            "taille_boutique": "petite",
+            "taille_labo": "petite",
+            "taille_stock": "moyen",
+            "taille_vente": "moyen"
+        }
     }
 }

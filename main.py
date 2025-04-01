@@ -4,7 +4,7 @@ import parametres_lieu
 import couts
 
 # 🔹 Version actuelle du programme
-VERSION = "0.09"
+VERSION = "0.10"
 
 def afficher_recapitulatif(joueur, boutique, info_boulangerie, params):
     """Affiche un récapitulatif détaillé de la boulangerie avec les coûts de fonctionnement."""
