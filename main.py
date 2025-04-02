@@ -2,9 +2,32 @@ import boulangerie
 import sauvegarde
 import parametres_lieu
 import couts
+import strategie
+
+
+
 
 # 🔹 Version actuelle du programme
-VERSION = "0.10"
+VERSION = "0.11"
+
+
+
+def appliquer_strategie(clients, budget):
+    """Applique la stratégie de gestion mensuelle."""
+    strategie = strategie.choisir_strategie()
+    
+    # Modification du nombre de clients
+    clients += int(clients * (strategie["effet_clients"] / 100))
+    
+    # Modification du chiffre d'affaires (CA) et des coûts
+    budget["total"] += budget["total"] * (strategie["effet_ca"] / 100)
+    budget["total"] += strategie["effet_cout"]  # Coût fixe (ex: publicité -300€)
+
+    print(f"\n📊 Stratégie choisie : {strategie['nom']}")
+    print(f"👥 Impact sur les clients : {strategie['effet_clients']}% ➝ {clients} clients")
+    print(f"💰 Impact sur le budget : {budget['total']:.2f}€\n")
+
+    return clients, budget
 
 def afficher_recapitulatif(joueur, boutique, info_boulangerie, params):
     """Affiche un récapitulatif détaillé de la boulangerie avec les coûts de fonctionnement."""
@@ -61,6 +84,7 @@ def main():
             # ✅ Définition correcte de `params`
             lieu = info_boulangerie['lieu']
             params = parametres_lieu.obtenir_parametres_lieu(lieu)
+            
 
             # ✅ Affichage complet du récapitulatif
             afficher_recapitulatif(joueur, boutique, info_boulangerie, params)
@@ -73,6 +97,17 @@ def main():
     # ✅ Définition correcte de `params`
     lieu = info_boulangerie['lieu']
     params = parametres_lieu.obtenir_parametres_lieu(lieu)
+
+    # Récupérer la spécialité du patron (boulangerie ou pâtisserie)
+    specialite_patron = info_boulangerie.get("specialite", "boulangerie")
+
+    # Recrutement des employés
+    equipe, cout_salarial = strategie.recruter_employes(specialite_patron)
+
+    # Ajout de l'équipe et des coûts à la sauvegarde
+    info_boulangerie["equipe"] = equipe
+    info_boulangerie["cout_salarial"] = cout_salarial
+
 
     # ✅ Affichage complet du récapitulatif
     afficher_recapitulatif(joueur, boutique, info_boulangerie, params)
