@@ -26,4 +26,31 @@ def choisir_strategie():
 
     choix = input("Entrez le numéro de votre choix : ").strip()
     return strategies.get(choix, strategies["6"])  # Par défaut : gestion neutre
+
+def recruter_employes(specialite_patron):
+    """Définit l'équipe nécessaire en fonction de la spécialité du patron."""
+    equipe = {}
     
+    if specialite_patron == "boulangerie":
+        equipe = {
+            "Boulanger": 1,
+            "Pâtissier": 1,
+            "Vendeur": 1
+        }
+    elif specialite_patron == "patisserie":
+        equipe = {
+            "Boulanger": 1,
+            "Pâtissier": 1,
+            "Vendeur": 2
+        }
+    
+    # Calcul des coûts salariaux
+    salaire_mensuel = {
+        "Boulanger": 2000,
+        "Pâtissier": 2000,
+        "Vendeur": 1600
+    }
+    
+    cout_salarial = sum(salaire_mensuel[poste] * nombre for poste, nombre in equipe.items())
+
+    return equipe, cout_salarial

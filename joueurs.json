@@ -13,6 +13,20 @@
             "taille_labo": "moyen",
             "taille_stock": "moyen",
             "taille_vente": "moyen"
+        },
+        "": {
+            "lieu": "Paris",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "SARL",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            },
+            "taille_boutique": "petite",
+            "taille_labo": "moyenne",
+            "taille_stock": "moyen",
+            "taille_vente": "moyen"
         }
     },
     "Ines": {
@@ -67,6 +81,34 @@
             "taille_labo": "petite",
             "taille_stock": "moyen",
             "taille_vente": "moyen"
+        }
+    },
+    "Romane": {
+        "Romanita": {
+            "lieu": "Ville",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "SARL",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            },
+            "taille_boutique": "petite",
+            "taille_labo": "petite"
+        }
+    },
+    "Zorica": {
+        "Zoki": {
+            "lieu": "Paris",
+            "mode": "Reprise",
+            "forme_juridique": "SAS",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 160000,
+                "total": 180000
+            },
+            "taille_boutique": "moyenne",
+            "taille_labo": "ke"
         }
     }
 }
