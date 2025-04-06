@@ -1,7 +1,7 @@
 # parametres_lieu.py
 
 import random
-import saisonnalite  # Module qui gère l'effet de la saisonnalité
+from simulation import saisonnalite
 
 PARAMETRES_LIEU = {
     "Paris": {

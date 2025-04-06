@@ -52,3 +52,20 @@ def fabriquer_produit(nom, stock, recettes=recettes_patisseries_arabes):
 
     cout = recettes[nom]["cout_unitaire"]
     return f"✅ {nom} fabriqué avec succès. Coût : {cout:.2f} €"
+
+if __name__ == "__main__":
+    stock_initial = {
+        "semoule": 1000,
+        "dattes": 500,
+        "miel": 300,
+        "beurre": 200,
+        "pâte filo": 600,
+        "amandes": 400,
+        "farine": 800,
+        "eau de fleur d'oranger": 200,
+        "sucre": 300
+    }
+
+    print(fabriquer_produit("Makrout", stock_initial))
+    print(fabriquer_produit("Baklava", stock_initial))
+    print(fabriquer_produit("Cornes de gazelle", stock_initial))

@@ -1,16 +1,22 @@
 import boulangerie
 import sauvegarde
-import parametres_lieu
-import couts
-import strategie
+from simulation import parametres_lieu
+from simulation import couts
+from simulation import strategie
+
 
 
 
 
 # 🔹 Version actuelle du programme
-VERSION = "0.14"
+VERSION = "0.15"
 
-
+def saisir_non_vide(prompt):
+    while True:
+        valeur = input(prompt).strip()
+        if valeur:
+            return valeur
+        print("❌ Entrée vide non autorisée. Veuillez saisir une valeur.")
 
 def appliquer_strategie(clients, budget):
     """Applique la stratégie de gestion mensuelle."""

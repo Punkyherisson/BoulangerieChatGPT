@@ -6,3 +6,6 @@ __pycache__/
 
 # Ignorer les fichiers de logs (si jamais tu en crées)
 *.log
+
+#ignore les fichiers config structure
+reorganiser_projet.py

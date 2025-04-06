@@ -50,7 +50,9 @@
                 "apport": 20000,
                 "emprunt": 0,
                 "total": 20000
-            }
+            },
+            "taille_boutique": "",
+            "taille_labo": ""
         }
     },
     "zozo": {
@@ -109,6 +111,20 @@
             },
             "taille_boutique": "moyenne",
             "taille_labo": "ke"
+        }
+    },
+    "Lili": {
+        "Lilo": {
+            "lieu": "Ville",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "SARL",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            },
+            "taille_boutique": "petite",
+            "taille_labo": "moyenne"
         }
     }
 }
