@@ -26,3 +26,4 @@ if success:
     afficher_stock(stock)
 else:
     print("\n❌ Stock insuffisant pour fabriquer ce pain.")
+

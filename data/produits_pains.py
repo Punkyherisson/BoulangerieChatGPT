@@ -1,4 +1,5 @@
-produits_pains_content = '''
+# produit_pain.py
+
 PAINS_CLASSIQUES = {
     "Baguette": {
         "ingredients": {
@@ -53,6 +54,7 @@ PAINS_CLASSIQUES = {
         "cout": 0.60
     }
 }
+
 PAINS_SPECIAUX = {
     "Pain aux noix": {
         "ingredients": {

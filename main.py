@@ -9,7 +9,7 @@ from simulation import strategie
 
 
 # 🔹 Version actuelle du programme
-VERSION = "0.15"
+VERSION = "0.16"
 
 def saisir_non_vide(prompt):
     while True:
