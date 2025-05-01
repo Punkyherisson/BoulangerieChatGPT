@@ -96,6 +96,32 @@
                 "total": 20000
             },
             "taille_boutique": "petite",
+            "taille_labo": "petite",
+            "taille_stock": "moyen",
+            "taille_vente": "moyen"
+        },
+        "PainGrille": {
+            "lieu": "Paris",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "SARL",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            },
+            "taille_boutique": "petite",
+            "taille_labo": "petite"
+        },
+        "Zozo": {
+            "lieu": "Paris",
+            "mode": "Reprise",
+            "forme_juridique": "SARL",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 160000,
+                "total": 180000
+            },
+            "taille_boutique": "petite",
             "taille_labo": "petite"
         }
     },
@@ -125,6 +151,48 @@
             },
             "taille_boutique": "petite",
             "taille_labo": "moyenne"
+        }
+    },
+    "Pipo": {
+        "Rascal": {
+            "lieu": "Paris",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "SARL",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            },
+            "taille_boutique": "petite",
+            "taille_labo": "petite"
+        }
+    },
+    "PIPO": {
+        "gft": {
+            "lieu": "Paris",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "SARL",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            },
+            "taille_boutique": "petite",
+            "taille_labo": "petite"
+        }
+    },
+    "Manouchka": {
+        "Zouba": {
+            "lieu": "Paris",
+            "mode": "Cr\u00e9ation",
+            "forme_juridique": "SARL",
+            "budget": {
+                "apport": 20000,
+                "emprunt": 0,
+                "total": 20000
+            },
+            "taille_boutique": "petite",
+            "taille_labo": "petite"
         }
     }
 }

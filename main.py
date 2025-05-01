@@ -3,13 +3,19 @@ import sauvegarde
 from simulation import parametres_lieu
 from simulation import couts
 from simulation import strategie
+from couts_taille import COUTS_TAILLES
 
-
-
+def calculer_couts_taille(taille_boutique, taille_labo, taille_stock, taille_vente):
+    return (
+        COUTS_TAILLES["boutique"].get(taille_boutique, 0) +
+        COUTS_TAILLES["labo"].get(taille_labo, 0) +
+        COUTS_TAILLES["stock"].get(taille_stock, 0) +
+        COUTS_TAILLES["vente"].get(taille_vente, 0)
+    )
 
 
 # 🔹 Version actuelle du programme
-VERSION = "0.16"
+VERSION = "0.17"
 
 def saisir_non_vide(prompt):
     while True:
@@ -59,8 +65,13 @@ def afficher_recapitulatif(joueur, boutique, info_boulangerie, params):
     # Récupération des tailles et du loyer pour le calcul des coûts
     taille_boutique = info_boulangerie["taille_boutique"]
     taille_labo = info_boulangerie["taille_labo"]
+    taille_stock = info_boulangerie.get("taille_stock", "petit")
+    taille_vente = info_boulangerie.get("taille_vente", "petit")
     loyer = params["loyer_mensuel"][1]  # Loyer haut de la fourchette
-    resultats_couts = couts.calculer_cout_total(taille_boutique, taille_labo, info_boulangerie['lieu'], loyer)
+
+    resultats_couts = couts.calculer_cout_total(
+    taille_boutique, taille_labo, taille_stock, taille_vente,
+    info_boulangerie['lieu'], loyer)
 
     print("\n📉 💰 COÛTS DE FONCTIONNEMENT 💰 📉")
     for categorie, montant in resultats_couts["details"].items():
@@ -113,6 +124,7 @@ def main():
     # Ajout de l'équipe et des coûts à la sauvegarde
     info_boulangerie["equipe"] = equipe
     info_boulangerie["cout_salarial"] = cout_salarial
+    
 
 
     # ✅ Affichage complet du récapitulatif

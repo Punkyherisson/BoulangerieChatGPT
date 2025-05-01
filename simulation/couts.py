@@ -1,17 +1,34 @@
-def obtenir_couts_fixes(taille_boutique):
-    """Retourne les coûts fixes mensuels en fonction de la taille de la boutique."""
-    assurances = {
-        "petite": 100,  # Moins de matériel à couvrir
-        "moyenne": 150,  # Standard
-        "grande": 200  # Plus d'équipements, plus de risques
+def obtenir_couts_fixes(taille_boutique, taille_stock, taille_vente):
+    """Retourne les coûts fixes mensuels en fonction de la taille des espaces."""
+    
+    assurances_boutique = {
+        "petite": 100,
+        "moyenne": 150,
+        "grande": 200
+    }
+
+    charges_stock = {
+        "petite": 50,
+        "moyenne": 80,
+        "grande": 120
+    }
+
+    charges_vente = {
+        "petite": 70,
+        "moyenne": 110,
+        "grande": 160
     }
 
     frais_bancaires = 50  # 🏦 Abonnement TPE fixe
 
     return {
-        "assurances": assurances.get(taille_boutique, 150),
+        "assurances": assurances_boutique.get(taille_boutique, 150),
+        "stock": charges_stock.get(taille_stock, 80),
+        "vente": charges_vente.get(taille_vente, 110),
         "frais_bancaires": frais_bancaires,
     }
+
+
 
 def obtenir_couts_variables(taille_labo, lieu):
     """Retourne les coûts variables mensuels selon la taille du labo et le lieu."""
@@ -34,9 +51,10 @@ def obtenir_couts_variables(taille_labo, lieu):
         "marketing": marketing.get(lieu, 200),
     }
 
-def calculer_cout_total(taille_boutique, taille_labo, lieu, loyer):
+
+def calculer_cout_total(taille_boutique, taille_labo, taille_stock, taille_vente, lieu, loyer):
     """Calcule le coût total mensuel en intégrant le loyer du lieu."""
-    couts_fixes = obtenir_couts_fixes(taille_boutique)
+    couts_fixes = obtenir_couts_fixes(taille_boutique, taille_stock, taille_vente)
     couts_variables = obtenir_couts_variables(taille_labo, lieu)
 
     total = loyer + sum(couts_fixes.values()) + sum(couts_variables.values())
